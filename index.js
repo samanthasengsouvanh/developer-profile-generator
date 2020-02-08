@@ -4,25 +4,26 @@ const api = require("./api")
 const convertFactory = require("electron-html-to");
 var path = require("path");
 var open = require("open")
+const fs = require("fs")
 const questions = [
     {
         type: "input",
         name: "username",
         message: "what is your Github username?"
     },
-
+​
    {
         type: "list",
         name: "color",
-        message: "what is your fovorite color?",
+        message: "what is your favorite color?",
         choices: ["red","blue", "green","pink"]
     }
 ];
-
+​
 function writeToFile(fileName, data) {
  
 }
-
+​
 function init() {
     inquirer.prompt(questions).then((answers) => {
         var username = answers.username;
@@ -45,14 +46,15 @@ function init() {
                 if (err) {
                   return console.error(err);
                 }
-             
-                //result.stream.pipe(fs.createWriteStream(path.join(__dirname, "resume.pdf")));
-                result.stream.pipe(fs.createWriteStream('./resume.pdf'));
+                console.log(result.numberOfPages);
+                console.log(result.logs);
+                result.stream.pipe(fs.createWriteStream(path.join(__dirname, "resume.pdf")));
+                //result.stream.pipe(fs.createWriteStream('./resume.pdf'));
                 conversion.kill(); // necessary if you use the electron-server strategy, see bellow for details
               });
               open(path.join(process.cwd(), "resume.pdf"))
         })
     })
 }
-
+​
 init();

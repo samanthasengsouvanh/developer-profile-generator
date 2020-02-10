@@ -11,19 +11,19 @@ const questions = [
         name: "username",
         message: "what is your Github username?"
     },
-​
+
    {
         type: "list",
         name: "color",
-        message: "what is your favorite color?",
+        message: "what is your fovorite color?",
         choices: ["red","blue", "green","pink"]
     }
 ];
-​
+
 function writeToFile(fileName, data) {
  
 }
-​
+
 function init() {
     inquirer.prompt(questions).then((answers) => {
         var username = answers.username;
@@ -56,5 +56,5 @@ function init() {
         })
     })
 }
-​
+
 init();

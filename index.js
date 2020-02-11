@@ -9,13 +9,13 @@ const questions = [
     {
         type: "input",
         name: "username",
-        message: "what is your Github username?"
+        message: "What is your Github username?"
     },
 
    {
         type: "list",
         name: "color",
-        message: "what is your fovorite color?",
+        message: "What is your favorite color?",
         choices: ["red","blue", "green","pink"]
     }
 ];

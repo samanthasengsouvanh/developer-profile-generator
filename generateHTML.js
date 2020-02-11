@@ -35,6 +35,7 @@ const colors = {
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"/>
         <link href="https://fonts.googleapis.com/css?family=BioRhyme|Cabin&display=swap" rel="stylesheet">
         <title>Document</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <style>
             @page {
               margin: 0;
@@ -172,13 +173,46 @@ const colors = {
            }
         </style>
         <div class="container">
-        <h1>My name is ${data.name}</h1>
-        <h2>My location: ${data.location}</h2>
-        <h2>Pulbic REPOSITORIES: ${data.public_repos}</h2>
-        <h2>followers: ${data.followers}</h2>
-        <h2>Stars: ${data.stars}</h2>
+        <div row>
+          <div col>
+            <div class="card mb-3">
+            <img src="${data.avatar_url}" style="justify-content: center; height: 200px; width: 150px" alt="...">
+              <h6 class="card-title" style="text-align: center;">${data.name}</h6>
+              <p class="card-text" style="text-align: center;" >${data.location}</p>
+              <p class="card-text" style="text-align: center;">${data.bio}</p>
+              <p class="card-text" style="text-align: center;">${data.blog}</p>
+          </div>
         </div>
-           
+      </div>
+        <div row>
+          <div col-4>
+            <div class="card mb-3">
+              <div class="card-header" style="text-align: center;">Public Repositories</div>
+                <h5 class="card-title" style="text-align: center;">${data.public_repos}</h5>
+            </div>
+          </div>
+          <div col-4>
+            <div class="card mb-3">
+              <div class="card-header" style="text-align: center;">Starred Repositories</div>
+                <h5 class="card-title" style="text-align: center;">${data.stars}</h5>
+              </div>
+          </div>
+        </div>
+        <div row>
+          <div col-4>
+            <div class="card mb-3">
+              <div class="card-header" style="text-align: center;">Followers</div>
+                <h5 class="card-title" style="text-align: center;">${data.followers}</h5>
+              </div>
+          </div>
+          <div col-4>
+            <div class="card mb-3">
+              <div class="card-header" style="text-align: center;">Following</div>
+                <h5 class="card-title" style="text-align: center;">${data.following}</h5>
+              </div>
+          </div>
+        </div>
+      </div>
         `
           }
 

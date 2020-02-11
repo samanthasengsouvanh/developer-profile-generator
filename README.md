@@ -12,4 +12,9 @@ When preparing a report for stakeholders, it is important to have up-to-date inf
 
 ## Demo
 
+![RESUME PDF](./assets/resume-pdf.png)
+
+## Author
+
+Samantha Sengsouvanh
 

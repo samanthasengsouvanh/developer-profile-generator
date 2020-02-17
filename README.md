@@ -1,3 +1,5 @@
+# Developer Profile Generator
+
 ## User Story
 
 AS A product manager
@@ -18,3 +20,6 @@ When preparing a report for stakeholders, it is important to have up-to-date inf
 
 Samantha Sengsouvanh
 
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
